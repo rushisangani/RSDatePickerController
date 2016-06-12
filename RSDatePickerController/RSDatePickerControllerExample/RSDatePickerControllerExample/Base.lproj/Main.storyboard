@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkY-La-Pb0">
+                                <rect key="frame" x="50" y="120" width="84" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Select Date"/>
+                                <connections>
+                                    <action selector="dateButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GKG-mO-Pr0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSG-XZ-oqu">
+                                <rect key="frame" x="464" y="120" width="86" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Select Time"/>
+                                <connections>
+                                    <action selector="timeButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9CI-Dz-vUW"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Select Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjK-HW-bFW">
+                                <rect key="frame" x="130" y="170" width="120" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="e9Y-qs-Hdp"/>
+                                    <constraint firstAttribute="height" constant="36" id="kMR-5P-VGT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="nOA-tk-FeP"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IOQ-fN-OQ6"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-9q-j41">
+                                <rect key="frame" x="50" y="178" width="43" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fSG-XZ-oqu" secondAttribute="trailing" constant="50" id="0fb-gs-72H"/>
+                            <constraint firstItem="xkY-La-Pb0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="6dT-Gc-4xt"/>
+                            <constraint firstItem="xkY-La-Pb0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="J52-gD-8OY"/>
+                            <constraint firstItem="mjK-HW-bFW" firstAttribute="leading" secondItem="wSj-9q-j41" secondAttribute="trailing" constant="37" id="TtO-5u-Qfe"/>
+                            <constraint firstItem="wSj-9q-j41" firstAttribute="leading" secondItem="xkY-La-Pb0" secondAttribute="leading" id="b02-Cf-cdB"/>
+                            <constraint firstItem="mjK-HW-bFW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="e0X-IP-J8a"/>
+                            <constraint firstItem="mjK-HW-bFW" firstAttribute="centerY" secondItem="wSj-9q-j41" secondAttribute="centerY" id="heO-ab-2gu"/>
+                            <constraint firstItem="fSG-XZ-oqu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ruU-P9-MN6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnDate" destination="xkY-La-Pb0" id="1bJ-yB-uWH"/>
+                        <outlet property="btnTime" destination="fSG-XZ-oqu" id="Zy6-0L-Bt1"/>
+                        <outlet property="txtSelectDate" destination="mjK-HW-bFW" id="hDB-Ey-vci"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
