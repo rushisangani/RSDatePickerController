@@ -5,8 +5,6 @@ RSDatePickerController can be used to show Date Picker or Time Picker from any V
 
 ## Features
 
-It supports following features:
-
 - Show Date/Time Picker as a ViewController in iPhone and as a PopOverController in iPad.
 - Specify any Date/Time format to get selected date or time in secified format.
 - Specify Maximum and Minimum date to control DatePicker behaviour.
@@ -25,6 +23,22 @@ It supports following features:
 
 ```objective-c
 [[RSDatePickerController sharedInstance] showTimePickerWithDate:nil dateFormat:nil fromView:sender inViewController:self];
+```
+
+### Show DatePicker from UITextField
+
+```objective-c
+
+[textField addTarget:self action:@selector(openDatePicker:) forControlEvents:UIControlEventTouchDown];
+
+/* Disable textfield editing */
+-(BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    return NO;
+}
+
+-(void)openDatePicker:(id)sender {    
+    [[RSDatePickerController sharedInstance] showDatePickerWithDate:nil dateFormat:nil fromView:sender inViewController:self];
+}
 ```
 
 ### Get Date in specified format
