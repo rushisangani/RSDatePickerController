@@ -3,6 +3,10 @@
 The convinient control to show **UIDatePicker** for Date and Time selection.
 RSDatePickerController can be used to show Date Picker or Time Picker from any View/ViewController.
 
+
+![Alt text](/Images/datepicker.png?raw=true "Date Picker")       ![Alt text](/Images/timepicker.png?raw=true "Time Picker")
+
+
 ## Features
 
 - Show Date/Time Picker as a ViewController in iPhone and as a PopOverController in iPad.
