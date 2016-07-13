@@ -173,7 +173,7 @@ static NSString *kSourceViewNilMessage  =   @"SourceView can not be nil";
         [self.delegate didSelectDate:nil dateString:@"" forView:self.sourceView];
     }
     
-    self.date = nil;
+    _date = nil;
     [self dismissViewControllerAnimated:NO completion:nil];
 }
 
