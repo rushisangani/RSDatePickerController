@@ -33,7 +33,9 @@ static NSString *kSourceViewNilMessage  =   @"SourceView can not be nil";
 
 
 @interface RSDatePickerController ()<UIPopoverPresentationControllerDelegate>
-
+{
+    NSDate *_date;
+}
 @property (nonatomic, strong) UIView *backGroundView;           // transparent background View
 
 @property (nonatomic, strong) UIDatePicker    *datePicker;      // date picker view
@@ -50,6 +52,7 @@ static NSString *kSourceViewNilMessage  =   @"SourceView can not be nil";
 @end
 
 @implementation RSDatePickerController
+@synthesize date = _date;
 
 #pragma mark - Singleton instance
 
@@ -315,6 +318,12 @@ static NSString *kSourceViewNilMessage  =   @"SourceView can not be nil";
     
     _maximumDate = maximumDate;
     self.datePicker.maximumDate = maximumDate;
+}
+
+-(void)setDate:(NSDate *)date {
+    
+    _date = date;
+    self.datePicker.date = _date;
 }
 
 @end
